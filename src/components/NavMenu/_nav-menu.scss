@@ -9,6 +9,7 @@
     display: flex;
     justify-content: flex-end;
     z-index: 99;
+    transition: all .5s;
 
     & .nav__menu {
         background-color: $Almost_White;

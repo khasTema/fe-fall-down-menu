@@ -1,0 +1,20 @@
+.menu__block {
+    list-style: none;
+    transform: translateY(-1em);
+    // margin-bottom: 0;
+
+    & .block__item {
+        margin-bottom: 1.5em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & .item__link {
+            @include menuItem;
+            & svg {
+            margin-right: 0.5em;
+            }
+        }
+    }
+}

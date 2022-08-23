@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { ReactComponent as MenuClose } from '../../images/icon-close-menu.svg';
 import { ReactComponent as ArrowUP } from '../../images/icon-arrow-up.svg';
 import { ReactComponent as ArrowDOWN } from '../../images/icon-arrow-down.svg';
+import Features from './FeaturesList/Features';
+import Company from './CompanyList/Company';
 
-function NavMenu() {
+function NavMenu({showMenu, setIsMenuShown}) {
   // reafctor into one function
   const [isFeaturesClicked, setIsFeaturesClicked] = useState(false)
   const [isCompanyClicked, setIsCompanyClicked] = useState(false)
@@ -18,18 +20,20 @@ function NavMenu() {
 
 
   return (
-    <div className="menu__wrapper">
+    <div className="menu__wrapper" style={showMenu ? {display: 'flex'} : {display: 'none'}}>
       <div className="nav__menu">
-        <a href='/#' className="__close">
-          <MenuClose/>
+        <a href='/#' className="__close" >
+          <MenuClose onClick={() => setIsMenuShown(false)}/>
         </a>
         <div className="menu__list">
           <a href="/#" className="menu_item" onClick={handleFeaturesClick}>
-            Features {isFeaturesClicked ? <ArrowDOWN/> : <ArrowUP/> }
+            Features {isFeaturesClicked ? <ArrowUP/> : <ArrowDOWN/> }
           </a>
+          <Features show={isFeaturesClicked}/>
           <a href="/#" className="menu_item" onClick={handleCompanyClick}>
-            Company {isCompanyClicked ? <ArrowDOWN/> : <ArrowUP/> }
+            Company {isCompanyClicked ? <ArrowUP/> : <ArrowDOWN/> }
           </a>
+          <Company show={isCompanyClicked}/>
           <a href="/#" className="menu_item">
             Careers
           </a>

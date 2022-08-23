@@ -1,10 +1,14 @@
 
-import './App.scss';
+import Article from './components/Article/Article';
+import NavBar from './components/NavBar/NavBar';
+import './styles/main.scss';
+
 
 function App() {
   return (
     <div className="App">
-     hello world
+     <NavBar/>
+     <Article/>
     </div>
   );
 }

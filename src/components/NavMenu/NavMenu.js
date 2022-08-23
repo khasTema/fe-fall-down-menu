@@ -18,13 +18,19 @@ function NavMenu({showMenu, setIsMenuShown}) {
     setIsCompanyClicked(prev => !prev)
   }
 
+  function handleMenuClose (){
+    setIsMenuShown(false)
+    setIsFeaturesClicked(false)
+    setIsCompanyClicked(false)
+  }
+
 
   return (
     <div className="menu__wrapper" style={showMenu ? {display: 'flex'} : {display: 'none'}}>
       <div className="nav__menu">
-        <a href='/#' className="__close" >
-          <MenuClose onClick={() => setIsMenuShown(false)}/>
-        </a>
+        <div className="__close" >
+          <MenuClose onClick={handleMenuClose}/>
+        </div>
         <div className="menu__list">
           <a href="/#" className="menu_item" onClick={handleFeaturesClick}>
             Features {isFeaturesClicked ? <ArrowUP/> : <ArrowDOWN/> }

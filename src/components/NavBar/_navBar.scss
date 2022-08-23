@@ -1,10 +1,9 @@
 .navigation {
-    border: 1px dashed red;
+    // border: 1px dashed red;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
-
-    
+    padding: 1.3em .85em;
+    position: relative;
 }

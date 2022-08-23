@@ -1,3 +1,5 @@
+@import './variables';
+
 * {
     box-sizing: border-box;
 }
@@ -5,6 +7,36 @@
 body {
     margin: 0;
     padding: 0;
+    font-size: 18px;
+    font-family: $font;
 }
 
+img {
+    width: 100%;
+}
+
+@mixin cta-button ($btn-color, $btn-background) {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $Almost_Black;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $btn-color;
+    padding: 1em 1.5em;
+    background-color: $btn-background;
+    transition: all 0.5s;
+}
+
+@mixin menuItem {
+    text-decoration: none;
+    color: $Medium_Gray;
+}
+
+
 @import '../components/NavBar/navBar';
+@import '../components/NavMenu/nav-menu';
+@import '../components/Article/article';
+@import '../components/Partners/partenrs';

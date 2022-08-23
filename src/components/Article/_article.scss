@@ -1,0 +1,41 @@
+.main__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.85em 5em;
+
+    & .__title {
+        font-weight: 700;
+        font-size: 2.2rem;
+        color: $Almost_Black;
+        margin-top: 1.2em;
+        margin-bottom: .5em;
+    }
+
+    & .__descr {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.6;
+        color: $Medium_Gray;
+        text-align: center;
+        padding: 0 1%;
+        margin-top: 0;
+        margin-bottom: 1.5em;
+    }
+
+    & .cta-btn {
+        @include cta-button($Almost_White, $Almost_Black);
+        margin-bottom: 2em;
+
+        &:hover {
+            background-color: transparent;
+            color: $Almost_Black
+        }
+    }
+}

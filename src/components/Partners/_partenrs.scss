@@ -1,0 +1,12 @@
+.__partners-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+
+    & .__partner-link {
+        & svg {
+           transform: scale(70%); 
+        }
+    }
+}

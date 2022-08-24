@@ -1,12 +1,14 @@
 .__partners-list {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
+    // max-width: 100%;
+    // padding: 0 15px;
 
     & .__partner-link {
+        // width: 23%;
         & svg {
-           transform: scale(70%); 
+           transform: scale(60%); 
         }
     }
 }

@@ -1,7 +1,7 @@
 .main__section {
     display: flex;
     flex-direction: column;
-    max-width: 1240px;
+    max-width: 1160px;
     margin: 0 auto;
 }
 
@@ -57,6 +57,7 @@
 
         & .__title {
             font-size: 3.5rem;
+            margin-top: 3.5em;
 
             & .dt-break {
                 display: block;

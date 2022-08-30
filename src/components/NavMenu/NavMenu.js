@@ -24,19 +24,29 @@ function NavMenu({showMenu, setIsMenuShown}) {
     setIsCompanyClicked(false)
   }
 
+  const screenSize = window.innerWidth
+
 
   return (
-    <div className="menu__wrapper" style={showMenu ? {display: 'flex'} : {display: 'none'}}>
+    <div className="menu__wrapper" style={showMenu || screenSize > 1024 ? {display: 'flex'} : {display: 'none'}}>
       <div className="nav__menu">
         <div className="__close" >
           <MenuClose onClick={handleMenuClose}/>
         </div>
         <div className="menu__list">
-          <a href="/#" className="menu_item" onClick={handleFeaturesClick}>
+          <a href="/#" 
+            className="menu_item" 
+            onClick={handleFeaturesClick} 
+            onBlur={screenSize > 1024 && handleMenuClose}
+          >
             Features {isFeaturesClicked ? <ArrowUP/> : <ArrowDOWN/> }
           </a>
           <Features show={isFeaturesClicked}/>
-          <a href="/#" className="menu_item" onClick={handleCompanyClick}>
+          <a href="/#" 
+            className="menu_item" 
+            onClick={handleCompanyClick} 
+            onBlur={screenSize > 1024 && handleMenuClose}
+          >
             Company {isCompanyClicked ? <ArrowUP/> : <ArrowDOWN/> }
           </a>
           <Company show={isCompanyClicked}/>

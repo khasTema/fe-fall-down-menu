@@ -38,6 +38,7 @@ img {
 @mixin menuItem {
     text-decoration: none;
     color: $Medium_Gray;
+    transition: all 0.5s;
 }
 
 

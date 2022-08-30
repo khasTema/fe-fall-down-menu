@@ -18,11 +18,6 @@ function Company({show}) {
           Blog
         </a>
       </li>
-      <li className="block__item">
-        <a href="/#" className="item__link">
-          
-        </a>
-      </li>
     </ul>
   )
 }

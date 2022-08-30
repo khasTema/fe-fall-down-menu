@@ -1,6 +1,8 @@
 .main__section {
     display: flex;
     flex-direction: column;
+    max-width: 1240px;
+    margin: 0 auto;
 }
 
 .__article {
@@ -16,6 +18,10 @@
         color: $Almost_Black;
         margin-top: 1.2em;
         margin-bottom: .5em;
+
+        & .dt-break {
+            display: none;
+        }
     }
 
     & .__descr {
@@ -36,6 +42,36 @@
         &:hover {
             background-color: transparent;
             color: $Almost_Black
+        }
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .main__section {
+        flex-direction: row-reverse;
+    }
+
+    .__article {
+        align-items: flex-start;
+        justify-content: space-between;
+
+        & .__title {
+            font-size: 3.5rem;
+
+            & .dt-break {
+                display: block;
+            }
+        }
+
+        & .__descr {
+            text-align: left;
+            font-size: 1.2rem;
+            padding-right: 10%;
+            margin-bottom: 3em;
+        }
+
+        & .cta-btn {
+            margin-bottom: 5em;
         }
     }
 }

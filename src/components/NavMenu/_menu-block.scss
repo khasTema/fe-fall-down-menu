@@ -1,0 +1,37 @@
+.menu__block {
+    list-style: none;
+    transform: translateY(-1em);
+
+    & .block__item {
+        margin-bottom: 1.5em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & .item__link {
+            @include menuItem;
+            & svg {
+            margin-right: 0.5em;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .menu__block {
+        // border: 1px solid black;
+        position: absolute;
+        top: 2em;
+        left: -4em;
+        padding: 1.5em 2em;
+        border-radius: 5%;
+        box-shadow: 3px 6px 19px 3px rgb(189 189 189);
+        background-color: $Almost_White;
+
+        &.company {
+            left: 8em;
+        }
+    }
+
+}

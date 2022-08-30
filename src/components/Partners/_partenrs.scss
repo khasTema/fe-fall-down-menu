@@ -1,0 +1,24 @@
+.__partners-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    // padding: 0 15px;
+
+    & .__partner-link {
+        // width: 23%;
+        & svg {
+           transform: scale(60%); 
+        }
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .__partners-list {
+        & .__partner-link {
+            & svg {
+                transform: scale(120%);
+            }
+        }
+    }
+}

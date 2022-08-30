@@ -1,0 +1,117 @@
+.menu__wrapper {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0000008c;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 99;
+    transition: all .5s;
+
+    & .nav__menu {
+        background-color: $Almost_White;
+        width: 75%;
+        padding: 0.85em;
+        transition: all 0.5s;
+
+        & .__close {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        & .menu__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            & .menu_item {
+                @include menuItem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 1.5em;
+
+                & svg {
+                    margin-left: .5em;
+                }
+
+                &:hover {
+                    color: $Almost_Black;
+                }
+            }
+        }
+
+        & .login {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            & .login__link {
+                @include menuItem;
+
+                &:hover {
+                    color: $Almost_Black
+                }
+            }
+            
+            & .register__link {
+                @include cta-button($Medium_Gray, transparent);
+                padding: 0.7em;
+                width: 90%;
+                margin-top: 1em;
+
+                &:hover {
+                   color: $Almost_Black;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1024px) {
+   .menu__wrapper {
+    position: unset;
+    height: auto;
+    background-color: transparent;
+
+        & .nav__menu {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            background-color: transparent;
+
+            & .menu__list {
+                flex-direction: row;
+                width: 45%;
+                margin-left: 3em;
+                position: relative;
+
+                & .menu_item {
+                    margin-bottom: 0;
+                }
+            }
+
+            & .login {
+               flex-direction: row;
+               width: 15%;
+
+               & .register__link {
+                    width: 60%;
+                    margin-top: 0;
+                }
+            }
+
+            & .__close {
+                display: none;
+
+                
+            }
+        }
+   }
+}

@@ -1,0 +1,17 @@
+.navigation {
+    // border: 1px dashed red;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3em .85em;
+    position: relative;
+}
+
+@media all and (min-width: 1024px) {
+    .navigation {
+        & .mob__menu {
+            display: none;
+        }
+    }
+}
